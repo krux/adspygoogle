@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>adspygoogle.dfp.DfpErrors</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="adspygoogle-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/google-api-ads-python">DFP API Python Client Library</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="adspygoogle-module.html">Package&nbsp;adspygoogle</a> ::
+        <a href="adspygoogle.dfp-module.html">Package&nbsp;dfp</a> ::
+        Module&nbsp;DfpErrors
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="adspygoogle.dfp.DfpErrors-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="adspygoogle.dfp.DfpErrors-module.html">Module adspygoogle.dfp.DfpErrors</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2010 Google Inc. All Rights Reserved.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># You may obtain a copy of the License at</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#      http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># See the License for the specific language governing permissions and</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># limitations under the License.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">"""Classes for handling errors."""</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">'api.sgrinberg@gmail.com (Stan Grinberg)'</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package adspygoogle=adspygoogle-module.html"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-0', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package adspygoogle.common=adspygoogle.common-module.html"><a title="adspygoogle.common" class="py-name" href="#" onclick="return doclink('link-1', 'common', 'link-1');">common</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module adspygoogle.common.Errors=adspygoogle.common.Errors-module.html"><a title="adspygoogle.common.Errors" class="py-name" href="#" onclick="return doclink('link-2', 'Errors', 'link-2');">Errors</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class adspygoogle.common.Errors.DetailError=adspygoogle.common.Errors.DetailError-class.html"><a title="adspygoogle.common.Errors.DetailError" class="py-name" href="#" onclick="return doclink('link-3', 'DetailError', 'link-3');">DetailError</a></tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-4', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="adspygoogle.common" class="py-name" href="#" onclick="return doclink('link-5', 'common', 'link-1');">common</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="adspygoogle.common.Errors" class="py-name" href="#" onclick="return doclink('link-6', 'Errors', 'link-2');">Errors</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Class adspygoogle.common.Errors.Error=adspygoogle.common.Errors.Error-class.html"><a title="adspygoogle.common.Errors.Error" class="py-name" href="#" onclick="return doclink('link-7', 'Error', 'link-7');">Error</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-8" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-8', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Package adspygoogle.dfp=adspygoogle.dfp-module.html"><a title="adspygoogle.dfp" class="py-name" href="#" onclick="return doclink('link-9', 'dfp', 'link-9');">dfp</a></tt> <tt class="py-keyword">import</tt> <tt id="link-10" class="py-name" targets="Variable adspygoogle.dfp.ERROR_TYPES=adspygoogle.dfp-module.html#ERROR_TYPES"><a title="adspygoogle.dfp.ERROR_TYPES" class="py-name" href="#" onclick="return doclink('link-10', 'ERROR_TYPES', 'link-10');">ERROR_TYPES</a></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="DfpError"></a><div id="DfpError-def"><a name="L26"></a><tt class="py-lineno"> 26</tt> <a class="py-toggle" href="#" id="DfpError-toggle" onclick="return toggle('DfpError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpError-class.html">DfpError</a><tt class="py-op">(</tt><tt class="py-base-class">Error</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpError-expanded"><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpError.</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling error.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="DfpError.__init"></a><div id="DfpError.__init-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="DfpError.__init-toggle" onclick="return toggle('DfpError.__init');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpError-class.html#__init">__init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpError.__init-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpError.__init-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-11" class="py-name" targets="Class adspygoogle.dfp.DfpErrors.DfpError=adspygoogle.dfp.DfpErrors.DfpError-class.html"><a title="adspygoogle.dfp.DfpErrors.DfpError" class="py-name" href="#" onclick="return doclink('link-11', 'DfpError', 'link-11');">DfpError</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method adspygoogle.common.AuthToken.AuthToken.__init__()=adspygoogle.common.AuthToken.AuthToken-class.html#__init__,Method adspygoogle.common.Buffer.Buffer.__init__()=adspygoogle.common.Buffer.Buffer-class.html#__init__,Method adspygoogle.common.Client.Client.__init__()=adspygoogle.common.Client.Client-class.html#__init__,Method adspygoogle.common.Errors.ApiAsStrError.__init__()=adspygoogle.common.Errors.ApiAsStrError-class.html#__init__,Method adspygoogle.common.Errors.CaptchaError.__init__()=adspygoogle.common.Errors.CaptchaError-class.html#__init__,Method adspygoogle.common.Errors.DetailError.__init__()=adspygoogle.common.Errors.DetailError-class.html#__init__,Method adspygoogle.common.Errors.Error.__init__()=adspygoogle.common.Errors.Error-class.html#__init__,Method adspygoogle.common.Errors.ValidationError.__init__()=adspygoogle.common.Errors.ValidationError-class.html#__init__,Method adspygoogle.common.GenericApiService.GenericApiService.__init__()=adspygoogle.common.GenericApiService.GenericApiService-class.html#__init__,Method adspygoogle.common.Logger.Logger.__init__()=adspygoogle.common.Logger.Logger-class.html#__init__,Method adspygoogle.common.SoapBuffer.SoapBuffer.__init__()=adspygoogle.common.SoapBuffer.SoapBuffer-class.html#__init__,Method adspygoogle.common.https.Https._SslAwareHttps.__init__()=adspygoogle.common.https.Https._SslAwareHttps-class.html#__init__,Method adspygoogle.common.https.Https._SslAwareHttpsConnection.__init__()=adspygoogle.common.https.Https._SslAwareHttpsConnection-class.html#__init__,Method adspygoogle.dfp.DfpClient.DfpClient.__init__()=adspygoogle.dfp.DfpClient.DfpClient-class.html#__init__,Method adspygoogle.dfp.DfpErrors.DfpApiError.__init__()=adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__init__,Method adspygoogle.dfp.DfpErrors.DfpDetailError.__init__()=adspygoogle.dfp.DfpErrors.DfpDetailError-class.html#__init__,Method adspygoogle.dfp.DfpSoapBuffer.DfpSoapBuffer.__init__()=adspygoogle.dfp.DfpSoapBuffer.DfpSoapBuffer-class.html#__init__,Method adspygoogle.dfp.GenericDfpService.GenericDfpService.__init__()=adspygoogle.dfp.GenericDfpService.GenericDfpService-class.html#__init__"><a title="adspygoogle.common.AuthToken.AuthToken.__init__
+adspygoogle.common.Buffer.Buffer.__init__
+adspygoogle.common.Client.Client.__init__
+adspygoogle.common.Errors.ApiAsStrError.__init__
+adspygoogle.common.Errors.CaptchaError.__init__
+adspygoogle.common.Errors.DetailError.__init__
+adspygoogle.common.Errors.Error.__init__
+adspygoogle.common.Errors.ValidationError.__init__
+adspygoogle.common.GenericApiService.GenericApiService.__init__
+adspygoogle.common.Logger.Logger.__init__
+adspygoogle.common.SoapBuffer.SoapBuffer.__init__
+adspygoogle.common.https.Https._SslAwareHttps.__init__
+adspygoogle.common.https.Https._SslAwareHttpsConnection.__init__
+adspygoogle.dfp.DfpClient.DfpClient.__init__
+adspygoogle.dfp.DfpErrors.DfpApiError.__init__
+adspygoogle.dfp.DfpErrors.DfpDetailError.__init__
+adspygoogle.dfp.DfpSoapBuffer.DfpSoapBuffer.__init__
+adspygoogle.dfp.GenericDfpService.GenericDfpService.__init__" class="py-name" href="#" onclick="return doclink('link-12', '__init__', 'link-12');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="DfpError.__str__"></a><div id="DfpError.__str__-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="DfpError.__str__-toggle" onclick="return toggle('DfpError.__str__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpError-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpError.__str__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpError.__str__-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="adspygoogle.dfp.DfpErrors.DfpError" class="py-name" href="#" onclick="return doclink('link-13', 'DfpError', 'link-11');">DfpError</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method adspygoogle.common.Errors.Error.__str__()=adspygoogle.common.Errors.Error-class.html#__str__,Method adspygoogle.dfp.DfpErrors.DfpApiError.__str__()=adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__str__,Method adspygoogle.dfp.DfpErrors.DfpError.__str__()=adspygoogle.dfp.DfpErrors.DfpError-class.html#__str__"><a title="adspygoogle.common.Errors.Error.__str__
+adspygoogle.dfp.DfpErrors.DfpApiError.__str__
+adspygoogle.dfp.DfpErrors.DfpError.__str__" class="py-name" href="#" onclick="return doclink('link-14', '__str__', 'link-14');">__str__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="DfpError.__call__"></a><div id="DfpError.__call__-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="DfpError.__call__-toggle" onclick="return toggle('DfpError.__call__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpError-class.html#__call__">__call__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpError.__call__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpError.__call__-expanded"><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-15" class="py-name"><a title="adspygoogle.dfp.DfpErrors.DfpError" class="py-name" href="#" onclick="return doclink('link-15', 'DfpError', 'link-11');">DfpError</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method adspygoogle.common.Errors.ApiAsStrError.__call__()=adspygoogle.common.Errors.ApiAsStrError-class.html#__call__,Method adspygoogle.common.Errors.DetailError.__call__()=adspygoogle.common.Errors.DetailError-class.html#__call__,Method adspygoogle.common.Errors.Error.__call__()=adspygoogle.common.Errors.Error-class.html#__call__,Method adspygoogle.dfp.DfpErrors.DfpApiError.__call__()=adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__call__,Method adspygoogle.dfp.DfpErrors.DfpDetailError.__call__()=adspygoogle.dfp.DfpErrors.DfpDetailError-class.html#__call__,Method adspygoogle.dfp.DfpErrors.DfpError.__call__()=adspygoogle.dfp.DfpErrors.DfpError-class.html#__call__"><a title="adspygoogle.common.Errors.ApiAsStrError.__call__
+adspygoogle.common.Errors.DetailError.__call__
+adspygoogle.common.Errors.Error.__call__
+adspygoogle.dfp.DfpErrors.DfpApiError.__call__
+adspygoogle.dfp.DfpErrors.DfpDetailError.__call__
+adspygoogle.dfp.DfpErrors.DfpError.__call__" class="py-name" href="#" onclick="return doclink('link-16', '__call__', 'link-16');">__call__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="DfpDetailError"></a><div id="DfpDetailError-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="DfpDetailError-toggle" onclick="return toggle('DfpDetailError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpDetailError-class.html">DfpDetailError</a><tt class="py-op">(</tt><tt class="py-base-class">DetailError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpDetailError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpDetailError-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpDetailError.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling detailed ApiException error.</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="DfpDetailError.__init__"></a><div id="DfpDetailError.__init__-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="DfpDetailError.__init__-toggle" onclick="return toggle('DfpDetailError.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpDetailError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">error</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpDetailError.__init__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpDetailError.__init__-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-17" class="py-name" targets="Class adspygoogle.dfp.DfpErrors.DfpDetailError=adspygoogle.dfp.DfpErrors.DfpDetailError-class.html"><a title="adspygoogle.dfp.DfpErrors.DfpDetailError" class="py-name" href="#" onclick="return doclink('link-17', 'DfpDetailError', 'link-17');">DfpDetailError</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="adspygoogle.common.AuthToken.AuthToken.__init__
+adspygoogle.common.Buffer.Buffer.__init__
+adspygoogle.common.Client.Client.__init__
+adspygoogle.common.Errors.ApiAsStrError.__init__
+adspygoogle.common.Errors.CaptchaError.__init__
+adspygoogle.common.Errors.DetailError.__init__
+adspygoogle.common.Errors.Error.__init__
+adspygoogle.common.Errors.ValidationError.__init__
+adspygoogle.common.GenericApiService.GenericApiService.__init__
+adspygoogle.common.Logger.Logger.__init__
+adspygoogle.common.SoapBuffer.SoapBuffer.__init__
+adspygoogle.common.https.Https._SslAwareHttps.__init__
+adspygoogle.common.https.Https._SslAwareHttpsConnection.__init__
+adspygoogle.dfp.DfpClient.DfpClient.__init__
+adspygoogle.dfp.DfpErrors.DfpApiError.__init__
+adspygoogle.dfp.DfpErrors.DfpDetailError.__init__
+adspygoogle.dfp.DfpSoapBuffer.DfpSoapBuffer.__init__
+adspygoogle.dfp.GenericDfpService.GenericDfpService.__init__" class="py-name" href="#" onclick="return doclink('link-18', '__init__', 'link-12');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__error</tt> <tt class="py-op">=</tt> <tt class="py-name">error</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__error</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__dict__</tt><tt class="py-op">.</tt><tt class="py-name">__setitem__</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__error</tt><tt class="py-op">[</tt><tt class="py-name">key</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="DfpDetailError.__call__"></a><div id="DfpDetailError.__call__-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="DfpDetailError.__call__-toggle" onclick="return toggle('DfpDetailError.__call__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpDetailError-class.html#__call__">__call__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpDetailError.__call__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpDetailError.__call__-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__error</tt><tt class="py-op">,</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="DfpApiError"></a><div id="DfpApiError-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="DfpApiError-toggle" onclick="return toggle('DfpApiError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpApiError-class.html">DfpApiError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpApiError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpApiError-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpApiError.</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling API exception.</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="DfpApiError.__init__"></a><div id="DfpApiError.__init__-def"><a name="L67"></a><tt class="py-lineno"> 67</tt> <a class="py-toggle" href="#" id="DfpApiError.__init__-toggle" onclick="return toggle('DfpApiError.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fault</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpApiError.__init__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpApiError.__init__-expanded"><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__fault</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_code</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_string</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">fault</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-string">'faultcode'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_code</tt> <tt class="py-op">=</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'faultcode'</tt><tt class="py-op">]</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-string">'faultstring'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_string</tt> <tt class="py-op">=</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'faultstring'</tt><tt class="py-op">]</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">message</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">trigger</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">errors</tt><tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-string">'detail'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-string">'message'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'detail'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">message</tt> <tt class="py-op">=</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'detail'</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'message'</tt><tt class="py-op">]</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">message</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">message</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_string</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-name">errors</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">None</tt><tt class="py-op">]</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-string">'detail'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt> <tt class="py-keyword">and</tt> <tt class="py-string">'errors'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'detail'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">      <tt class="py-name">errors</tt> <tt class="py-op">=</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'detail'</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'errors'</tt><tt class="py-op">]</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-string">'detail'</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt class="py-name">fault</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">      <tt class="py-name">errors</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">      <tt class="py-name">errors</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">fault</tt><tt class="py-op">[</tt><tt class="py-string">'detail'</tt><tt class="py-op">]</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">errors</tt><tt class="py-op">,</tt> <tt class="py-name">list</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">      <tt class="py-keyword">for</tt> <tt class="py-name">error</tt> <tt class="py-keyword">in</tt> <tt class="py-name">errors</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-comment"># Keys need to be of type str not unicode.</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">error_dct</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt> <tt class="py-keyword">in</tt> <tt class="py-name">error</tt><tt class="py-op">.</tt><tt class="py-name">items</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">errors</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-19" class="py-name"><a title="adspygoogle.dfp.DfpErrors.DfpDetailError" class="py-name" href="#" onclick="return doclink('link-19', 'DfpDetailError', 'link-17');">DfpDetailError</a></tt><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-name">error_dct</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">      <tt class="py-comment"># Keys need to be of type str not unicode.</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">      <tt class="py-name">error_dct</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt> <tt class="py-keyword">in</tt> <tt class="py-name">errors</tt><tt class="py-op">.</tt><tt class="py-name">items</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">errors</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-20" class="py-name"><a title="adspygoogle.dfp.DfpErrors.DfpDetailError" class="py-name" href="#" onclick="return doclink('link-20', 'DfpDetailError', 'link-17');">DfpDetailError</a></tt><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-name">error_dct</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="DfpApiError.__str__"></a><div id="DfpApiError.__str__-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="DfpApiError.__str__-toggle" onclick="return toggle('DfpApiError.__str__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpApiError.__str__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpApiError.__str__-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">fault_string</tt> </tt>
+</div><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="DfpApiError.__call__"></a><div id="DfpApiError.__call__-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="DfpApiError.__call__-toggle" onclick="return toggle('DfpApiError.__call__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpApiError-class.html#__call__">__call__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpApiError.__call__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DfpApiError.__call__-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__fault</tt><tt class="py-op">,</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="DfpRequestError"></a><div id="DfpRequestError-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="DfpRequestError-toggle" onclick="return toggle('DfpRequestError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpRequestError-class.html">DfpRequestError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpRequestError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpRequestError-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpRequestError.</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling request error."""</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="DfpGoogleInternalError"></a><div id="DfpGoogleInternalError-def"><a name="L110"></a><tt class="py-lineno">110</tt> <a class="py-toggle" href="#" id="DfpGoogleInternalError-toggle" onclick="return toggle('DfpGoogleInternalError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpGoogleInternalError-class.html">DfpGoogleInternalError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpGoogleInternalError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpGoogleInternalError-expanded"><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpGoogleInternalError.</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling Google internal error.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="DfpAuthenticationError"></a><div id="DfpAuthenticationError-def"><a name="L120"></a><tt class="py-lineno">120</tt> <a class="py-toggle" href="#" id="DfpAuthenticationError-toggle" onclick="return toggle('DfpAuthenticationError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpAuthenticationError-class.html">DfpAuthenticationError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpAuthenticationError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpAuthenticationError-expanded"><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpAuthenticationError.</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling authentication error.</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="DfpAccountError"></a><div id="DfpAccountError-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="DfpAccountError-toggle" onclick="return toggle('DfpAccountError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpAccountError-class.html">DfpAccountError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpAccountError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpAccountError-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpAccountError.</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling account error.</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="DfpWebpageError"></a><div id="DfpWebpageError-def"><a name="L140"></a><tt class="py-lineno">140</tt> <a class="py-toggle" href="#" id="DfpWebpageError-toggle" onclick="return toggle('DfpWebpageError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpWebpageError-class.html">DfpWebpageError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpWebpageError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpWebpageError-expanded"><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpWebpageError.</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling webpage error.</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="DfpBillingError"></a><div id="DfpBillingError-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="DfpBillingError-toggle" onclick="return toggle('DfpBillingError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpErrors.DfpBillingError-class.html">DfpBillingError</a><tt class="py-op">(</tt><tt class="py-base-class">DfpApiError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DfpBillingError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DfpBillingError-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">  <tt class="py-docstring">"""Implements DfpBillingError.</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">  Responsible for handling billing error.</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-comment"># Map error codes and types to their corresponding classes.</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable adspygoogle.dfp.DfpErrors.ERRORS=adspygoogle.dfp.DfpErrors-module.html#ERRORS"><a title="adspygoogle.dfp.DfpErrors.ERRORS" class="py-name" href="#" onclick="return doclink('link-21', 'ERRORS', 'link-21');">ERRORS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-22" class="py-name" targets="Variable adspygoogle.dfp.DfpErrors.index=adspygoogle.dfp.DfpErrors-module.html#index"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-22', 'index', 'link-22');">index</a></tt> <tt class="py-keyword">in</tt> <tt id="link-23" class="py-name"><a title="adspygoogle.dfp.ERROR_TYPES" class="py-name" href="#" onclick="return doclink('link-23', 'ERROR_TYPES', 'link-10');">ERROR_TYPES</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-24" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-24', 'index', 'link-22');">index</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">'AdUnitAfcSizeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'AdUnitCodeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'AdUnitHierarchyError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">               <tt class="py-string">'ApiError'</tt><tt class="py-op">,</tt> <tt class="py-string">'ApiVersionError'</tt><tt class="py-op">,</tt> <tt class="py-string">'CommonError'</tt><tt class="py-op">,</tt> <tt class="py-string">'CreativeError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">               <tt class="py-string">'CustomTargetingError'</tt><tt class="py-op">,</tt> <tt class="py-string">'DayPartTargetingError'</tt><tt class="py-op">,</tt> <tt class="py-string">'FileError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">               <tt class="py-string">'FlashCreativeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'ForecastError'</tt><tt class="py-op">,</tt> <tt class="py-string">'GeoTargetingError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">               <tt class="py-string">'ImageError'</tt><tt class="py-op">,</tt> <tt class="py-string">'InvalidUrlError'</tt><tt class="py-op">,</tt> <tt class="py-string">'InventoryTargetingError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">               <tt class="py-string">'InventoryUnitError'</tt><tt class="py-op">,</tt> <tt class="py-string">'LineItemCreativeAssociationError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">               <tt class="py-string">'LineItemCreativeAssociationOperationError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">               <tt class="py-string">'LineItemFlightDateError'</tt><tt class="py-op">,</tt> <tt class="py-string">'LineItemOperationError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">               <tt class="py-string">'NotNullError'</tt><tt class="py-op">,</tt> <tt class="py-string">'NullError'</tt><tt class="py-op">,</tt> <tt class="py-string">'OrderActionError'</tt><tt class="py-op">,</tt> <tt class="py-string">'OrderError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">               <tt class="py-string">'ParseError'</tt><tt class="py-op">,</tt> <tt class="py-string">'PermissionError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">               <tt class="py-string">'PublisherQueryLanguageContextError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">               <tt class="py-string">'PublisherQueryLanguageSyntaxError'</tt><tt class="py-op">,</tt> <tt class="py-string">'RangeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'RegExError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">               <tt class="py-string">'RequiredCollectionError'</tt><tt class="py-op">,</tt> <tt class="py-string">'RequiredError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">               <tt class="py-string">'RequiredNumberError'</tt><tt class="py-op">,</tt> <tt class="py-string">'RequiredSizeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'ReportError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">               <tt class="py-string">'ReservationDetailsError'</tt><tt class="py-op">,</tt> <tt class="py-string">'StatementError'</tt><tt class="py-op">,</tt> <tt class="py-string">'StringLengthError'</tt><tt class="py-op">,</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">               <tt class="py-string">'TypeError'</tt><tt class="py-op">,</tt> <tt class="py-string">'UniqueError'</tt><tt class="py-op">,</tt> <tt class="py-string">'UserDomainTargetingError'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">    <tt id="link-25" class="py-name"><a title="adspygoogle.dfp.DfpErrors.ERRORS" class="py-name" href="#" onclick="return doclink('link-25', 'ERRORS', 'link-21');">ERRORS</a></tt><tt class="py-op">[</tt><tt id="link-26" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-26', 'index', 'link-22');">index</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name" targets="Class adspygoogle.dfp.DfpErrors.DfpRequestError=adspygoogle.dfp.DfpErrors.DfpRequestError-class.html"><a title="adspygoogle.dfp.DfpErrors.DfpRequestError" class="py-name" href="#" onclick="return doclink('link-27', 'DfpRequestError', 'link-27');">DfpRequestError</a></tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">  <tt class="py-keyword">elif</tt> <tt id="link-28" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-28', 'index', 'link-22');">index</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">'InternalApiError'</tt><tt class="py-op">,</tt> <tt class="py-string">'QuotaError'</tt><tt class="py-op">,</tt> <tt class="py-string">'ServerError'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">    <tt id="link-29" class="py-name"><a title="adspygoogle.dfp.DfpErrors.ERRORS" class="py-name" href="#" onclick="return doclink('link-29', 'ERRORS', 'link-21');">ERRORS</a></tt><tt class="py-op">[</tt><tt id="link-30" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-30', 'index', 'link-22');">index</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name" targets="Class adspygoogle.dfp.DfpErrors.DfpGoogleInternalError=adspygoogle.dfp.DfpErrors.DfpGoogleInternalError-class.html"><a title="adspygoogle.dfp.DfpErrors.DfpGoogleInternalError" class="py-name" href="#" onclick="return doclink('link-31', 'DfpGoogleInternalError', 'link-31');">DfpGoogleInternalError</a></tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">  <tt class="py-keyword">elif</tt> <tt id="link-32" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-32', 'index', 'link-22');">index</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">'AuthenticationError'</tt><tt class="py-op">,</tt> <tt class="py-string">'InvalidEmailError'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">    <tt id="link-33" class="py-name"><a title="adspygoogle.dfp.DfpErrors.ERRORS" class="py-name" href="#" onclick="return doclink('link-33', 'ERRORS', 'link-21');">ERRORS</a></tt><tt class="py-op">[</tt><tt id="link-34" class="py-name"><a title="adspygoogle.dfp.DfpErrors.index" class="py-name" href="#" onclick="return doclink('link-34', 'index', 'link-22');">index</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name" targets="Class adspygoogle.dfp.DfpErrors.DfpAuthenticationError=adspygoogle.dfp.DfpErrors.DfpAuthenticationError-class.html"><a title="adspygoogle.dfp.DfpErrors.DfpAuthenticationError" class="py-name" href="#" onclick="return doclink('link-35', 'DfpAuthenticationError', 'link-35');">DfpAuthenticationError</a></tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="adspygoogle-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/google-api-ads-python">DFP API Python Client Library</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

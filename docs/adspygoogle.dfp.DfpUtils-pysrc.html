@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>adspygoogle.dfp.DfpUtils</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="adspygoogle-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/google-api-ads-python">DFP API Python Client Library</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="adspygoogle-module.html">Package&nbsp;adspygoogle</a> ::
+        <a href="adspygoogle.dfp-module.html">Package&nbsp;dfp</a> ::
+        Module&nbsp;DfpUtils
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="adspygoogle.dfp.DfpUtils-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="adspygoogle.dfp.DfpUtils-module.html">Module adspygoogle.dfp.DfpUtils</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2011 Google Inc. All Rights Reserved.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># You may obtain a copy of the License at</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#      http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># See the License for the specific language governing permissions and</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># limitations under the License.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">"""Handy utility functions."""</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">'api.sgrinberg@gmail.com (Stan Grinberg)'</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gzip</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">StringIO</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">time</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">urllib</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package adspygoogle=adspygoogle-module.html"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-0', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package adspygoogle.common=adspygoogle.common-module.html"><a title="adspygoogle.common" class="py-name" href="#" onclick="return doclink('link-1', 'common', 'link-1');">common</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Module adspygoogle.common.SanityCheck=adspygoogle.common.SanityCheck-module.html"><a title="adspygoogle.common.SanityCheck" class="py-name" href="#" onclick="return doclink('link-2', 'SanityCheck', 'link-2');">SanityCheck</a></tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-3', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="adspygoogle.common" class="py-name" href="#" onclick="return doclink('link-4', 'common', 'link-1');">common</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Module adspygoogle.common.Utils=adspygoogle.common.Utils-module.html"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-5', 'Utils', 'link-5');">Utils</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-6', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="adspygoogle.common" class="py-name" href="#" onclick="return doclink('link-7', 'common', 'link-1');">common</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module adspygoogle.common.Errors=adspygoogle.common.Errors-module.html"><a title="adspygoogle.common.Errors" class="py-name" href="#" onclick="return doclink('link-8', 'Errors', 'link-8');">Errors</a></tt> <tt class="py-keyword">import</tt> <tt id="link-9" class="py-name" targets="Class adspygoogle.common.Errors.ValidationError=adspygoogle.common.Errors.ValidationError-class.html"><a title="adspygoogle.common.Errors.ValidationError" class="py-name" href="#" onclick="return doclink('link-9', 'ValidationError', 'link-9');">ValidationError</a></tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-10', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Package adspygoogle.dfp=adspygoogle.dfp-module.html"><a title="adspygoogle.dfp" class="py-name" href="#" onclick="return doclink('link-11', 'dfp', 'link-11');">dfp</a></tt> <tt class="py-keyword">import</tt> <tt id="link-12" class="py-name" targets="Variable adspygoogle.dfp.DEFAULT_API_VERSION=adspygoogle.dfp-module.html#DEFAULT_API_VERSION"><a title="adspygoogle.dfp.DEFAULT_API_VERSION" class="py-name" href="#" onclick="return doclink('link-12', 'DEFAULT_API_VERSION', 'link-12');">DEFAULT_API_VERSION</a></tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-13" class="py-name"><a title="adspygoogle" class="py-name" href="#" onclick="return doclink('link-13', 'adspygoogle', 'link-0');">adspygoogle</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="adspygoogle.dfp" class="py-name" href="#" onclick="return doclink('link-14', 'dfp', 'link-11');">dfp</a></tt> <tt class="py-keyword">import</tt> <tt id="link-15" class="py-name" targets="Variable adspygoogle.dfp.LIB_HOME=adspygoogle.dfp-module.html#LIB_HOME"><a title="adspygoogle.dfp.LIB_HOME" class="py-name" href="#" onclick="return doclink('link-15', 'LIB_HOME', 'link-15');">LIB_HOME</a></tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="GetCurrencies"></a><div id="GetCurrencies-def"><a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="GetCurrencies-toggle" onclick="return toggle('GetCurrencies');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpUtils-module.html#GetCurrencies">GetCurrencies</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GetCurrencies-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GetCurrencies-expanded"><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">  <tt class="py-docstring">"""Get a list of available currencies.</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">  Returns:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">    list available currencies.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt id="link-16" class="py-name"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-16', 'Utils', 'link-5');">Utils</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Function adspygoogle.common.Utils.GetDataFromCsvFile()=adspygoogle.common.Utils-module.html#GetDataFromCsvFile"><a title="adspygoogle.common.Utils.GetDataFromCsvFile" class="py-name" href="#" onclick="return doclink('link-17', 'GetDataFromCsvFile', 'link-17');">GetDataFromCsvFile</a></tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="adspygoogle.dfp.LIB_HOME" class="py-name" href="#" onclick="return doclink('link-18', 'LIB_HOME', 'link-15');">LIB_HOME</a></tt><tt class="py-op">,</tt> <tt class="py-string">'data'</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                                               <tt class="py-string">'currencies.csv'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="GetTimezones"></a><div id="GetTimezones-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="GetTimezones-toggle" onclick="return toggle('GetTimezones');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpUtils-module.html#GetTimezones">GetTimezones</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GetTimezones-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GetTimezones-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">  <tt class="py-docstring">"""Get a list of available timezones.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">  Returns:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">    list Available timezones.</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt id="link-19" class="py-name"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-19', 'Utils', 'link-5');">Utils</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="adspygoogle.common.Utils.GetDataFromCsvFile" class="py-name" href="#" onclick="return doclink('link-20', 'GetDataFromCsvFile', 'link-17');">GetDataFromCsvFile</a></tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="adspygoogle.dfp.LIB_HOME" class="py-name" href="#" onclick="return doclink('link-21', 'LIB_HOME', 'link-15');">LIB_HOME</a></tt><tt class="py-op">,</tt> <tt class="py-string">'data'</tt><tt class="py-op">,</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                                               <tt class="py-string">'timezones.csv'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="GetAllEntitiesByStatement"></a><div id="GetAllEntitiesByStatement-def"><a name="L54"></a><tt class="py-lineno"> 54</tt> <a class="py-toggle" href="#" id="GetAllEntitiesByStatement-toggle" onclick="return toggle('GetAllEntitiesByStatement');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpUtils-module.html#GetAllEntitiesByStatement">GetAllEntitiesByStatement</a><tt class="py-op">(</tt><tt class="py-param">client</tt><tt class="py-op">,</tt> <tt class="py-param">service_name</tt><tt class="py-op">,</tt> <tt class="py-param">query</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-param">page_size</tt><tt class="py-op">=</tt><tt class="py-number">500</tt><tt class="py-op">,</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                              <tt class="py-param">server</tt><tt class="py-op">=</tt><tt class="py-string">'https://www.google.com'</tt><tt class="py-op">,</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                              <tt class="py-param">version</tt><tt class="py-op">=</tt><tt id="link-22" class="py-name"><a title="adspygoogle.dfp.DEFAULT_API_VERSION" class="py-name" href="#" onclick="return doclink('link-22', 'DEFAULT_API_VERSION', 'link-12');">DEFAULT_API_VERSION</a></tt><tt class="py-op">,</tt> <tt class="py-param">http_proxy</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GetAllEntitiesByStatement-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GetAllEntitiesByStatement-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">  <tt class="py-docstring">"""Get all existing entities by statement.</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">  All existing entities are retrieved for a given statement and page size. The</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">  retrieval of entities works across all services. Thus, the same method can</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">  be used to fetch companies, creatives, ad units, line items, etc. The results,</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">  even if they span multiple pages, are grouped into a single list of entities.</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">  Args:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">    client: Client an instance of Client.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    service_name: str name of the service to use.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    [optional]</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">    query: str a statement filter to apply, if any. The default is empty string.</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">    page_size: int size of the page to use. If page size is less than 0 or</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">               greater than 500, defaults to 500.</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">    server: str API server to access for this API call. The default value is</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">            'https://www.google.com'.</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">    version: str API version to use.</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">    http_proxy: str HTTP proxy to use.</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">  Returns:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">    list a list of existing entities.</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">  <tt class="py-name">service</tt> <tt class="py-op">=</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt><tt class="py-string">'client.Get%sService(server, version, http_proxy)'</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                 <tt class="py-op">%</tt> <tt class="py-name">service_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt id="link-23" class="py-name" targets="Function adspygoogle.dfp.DfpUtils.GetAllEntitiesByStatementWithService()=adspygoogle.dfp.DfpUtils-module.html#GetAllEntitiesByStatementWithService"><a title="adspygoogle.dfp.DfpUtils.GetAllEntitiesByStatementWithService" class="py-name" href="#" onclick="return doclink('link-23', 'GetAllEntitiesByStatementWithService', 'link-23');">GetAllEntitiesByStatementWithService</a></tt><tt class="py-op">(</tt><tt class="py-name">service</tt><tt class="py-op">,</tt> <tt class="py-name">query</tt><tt class="py-op">,</tt> <tt class="py-name">page_size</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="GetAllEntitiesByStatementWithService"></a><div id="GetAllEntitiesByStatementWithService-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="GetAllEntitiesByStatementWithService-toggle" onclick="return toggle('GetAllEntitiesByStatementWithService');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpUtils-module.html#GetAllEntitiesByStatementWithService">GetAllEntitiesByStatementWithService</a><tt class="py-op">(</tt><tt class="py-param">service</tt><tt class="py-op">,</tt> <tt class="py-param">query</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-param">page_size</tt><tt class="py-op">=</tt><tt class="py-number">500</tt><tt class="py-op">,</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                                         <tt class="py-param">bind_vars</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GetAllEntitiesByStatementWithService-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GetAllEntitiesByStatementWithService-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">  <tt class="py-docstring">"""Get all existing entities by statement.</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">  All existing entities are retrieved for a given statement and page size. The</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">  retrieval of entities works across all services. Thus, the same method can</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">  be used to fetch companies, creatives, ad units, line items, etc. The results,</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">  even if they span multiple pages, are grouped into a single list of entities.</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">  Args:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">    service: ApiService an instance of the service to use.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">    [optional]</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">    query: str a statement filter to apply, if any. The default is empty string.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    page_size: int size of the page to use. If page size is less than 0 or</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">               greater than 500, defaults to 500.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">    bind_vars: list Key value pairs of bind variables to use with query.</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">  Returns:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    list a list of existing entities.</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">  <tt class="py-name">service_name</tt> <tt class="py-op">=</tt> <tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">_service_name</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">:</tt><tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">_service_name</tt><tt class="py-op">.</tt><tt class="py-name">rfind</tt><tt class="py-op">(</tt><tt class="py-string">'Service'</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">service_name</tt> <tt class="py-op">==</tt> <tt class="py-string">'Inventory'</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-name">service_name</tt> <tt class="py-op">=</tt> <tt class="py-string">'AdUnit'</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">service_name</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'y'</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-name">method_name</tt> <tt class="py-op">=</tt> <tt class="py-name">service_name</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-string">'ies'</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-name">method_name</tt> <tt class="py-op">=</tt> <tt class="py-name">service_name</tt> <tt class="py-op">+</tt> <tt class="py-string">'s'</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">service_name</tt> <tt class="py-op">==</tt> <tt class="py-string">'Content'</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-name">method_name</tt> <tt class="py-op">=</tt> <tt class="py-name">service_name</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">  <tt class="py-name">method_name</tt> <tt class="py-op">=</tt> <tt class="py-string">'Get%sByStatement'</tt> <tt class="py-op">%</tt> <tt class="py-name">method_name</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">page_size</tt> <tt class="py-op">&lt;=</tt> <tt class="py-number">0</tt> <tt class="py-keyword">or</tt> <tt class="py-name">page_size</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">500</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-name">page_size</tt> <tt class="py-op">=</tt> <tt class="py-number">500</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">query</tt> <tt class="py-keyword">and</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">      <tt class="py-op">(</tt><tt class="py-name">query</tt><tt class="py-op">.</tt><tt class="py-name">upper</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-string">'LIMIT'</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt> <tt class="py-keyword">or</tt> <tt class="py-name">query</tt><tt class="py-op">.</tt><tt class="py-name">upper</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-string">'OFFSET'</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-24" class="py-name"><a title="adspygoogle.common.Errors.ValidationError" class="py-name" href="#" onclick="return doclink('link-24', 'ValidationError', 'link-9');">ValidationError</a></tt><tt class="py-op">(</tt><tt class="py-string">'The filter query contains an option that is '</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">                          <tt class="py-string">'incompatible with this method.'</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">  <tt class="py-name">offset</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">  <tt class="py-name">all_entities</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">  <tt class="py-keyword">while</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-name">filter_statement</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-string">'query'</tt><tt class="py-op">:</tt> <tt class="py-string">'%s LIMIT %s OFFSET %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">query</tt><tt class="py-op">,</tt> <tt class="py-name">page_size</tt><tt class="py-op">,</tt> <tt class="py-name">offset</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-string">'values'</tt><tt class="py-op">:</tt> <tt class="py-name">bind_vars</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">    <tt class="py-name">entities</tt> <tt class="py-op">=</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt><tt class="py-string">'service.%s(filter_statement)[0].get(\'results\')'</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                    <tt class="py-op">%</tt> <tt class="py-name">method_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">entities</tt><tt class="py-op">:</tt> <tt class="py-keyword">break</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">    <tt class="py-name">all_entities</tt><tt class="py-op">.</tt><tt class="py-name">extend</tt><tt class="py-op">(</tt><tt class="py-name">entities</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">entities</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">page_size</tt><tt class="py-op">:</tt> <tt class="py-keyword">break</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">    <tt class="py-name">offset</tt> <tt class="py-op">+=</tt> <tt class="py-name">page_size</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-name">all_entities</tt> </tt>
+</div><a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="DownloadReport"></a><div id="DownloadReport-def"><a name="L142"></a><tt class="py-lineno">142</tt> <a class="py-toggle" href="#" id="DownloadReport-toggle" onclick="return toggle('DownloadReport');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="adspygoogle.dfp.DfpUtils-module.html#DownloadReport">DownloadReport</a><tt class="py-op">(</tt><tt class="py-param">report_job_id</tt><tt class="py-op">,</tt> <tt class="py-param">export_format</tt><tt class="py-op">,</tt> <tt class="py-param">service</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DownloadReport-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DownloadReport-expanded"><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">  <tt class="py-docstring">"""Download and return report data.</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">  Args:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring">    report_job_id: str ID of the report job.</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-docstring">    export_format: str Export format for the report file.</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-docstring">    service: GenericDfpService A service pointing to the ReportService.</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"><tt class="py-docstring">  Returns:</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-docstring">    str Report data or empty string if report failed.</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">  <tt id="link-25" class="py-name"><a title="adspygoogle.common.SanityCheck" class="py-name" href="#" onclick="return doclink('link-25', 'SanityCheck', 'link-2');">SanityCheck</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Function adspygoogle.common.SanityCheck.ValidateTypes()=adspygoogle.common.SanityCheck-module.html#ValidateTypes"><a title="adspygoogle.common.SanityCheck.ValidateTypes" class="py-name" href="#" onclick="return doclink('link-26', 'ValidateTypes', 'link-26');">ValidateTypes</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">report_job_id</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">,</tt> <tt class="py-name">unicode</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">  <tt class="py-comment"># Wait for report to complete.</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">  <tt class="py-name">status</tt> <tt class="py-op">=</tt> <tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">GetReportJob</tt><tt class="py-op">(</tt><tt class="py-name">report_job_id</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'reportJobStatus'</tt><tt class="py-op">]</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">  <tt class="py-keyword">while</tt> <tt class="py-name">status</tt> <tt class="py-op">!=</tt> <tt class="py-string">'COMPLETED'</tt> <tt class="py-keyword">and</tt> <tt class="py-name">status</tt> <tt class="py-op">!=</tt> <tt class="py-string">'FAILED'</tt><tt class="py-op">:</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-27" class="py-name"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-27', 'Utils', 'link-5');">Utils</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Function adspygoogle.common.Utils.BoolTypeConvert()=adspygoogle.common.Utils-module.html#BoolTypeConvert"><a title="adspygoogle.common.Utils.BoolTypeConvert" class="py-name" href="#" onclick="return doclink('link-28', 'BoolTypeConvert', 'link-28');">BoolTypeConvert</a></tt><tt class="py-op">(</tt><tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">_config</tt><tt class="py-op">[</tt><tt class="py-string">'debug'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">      <tt class="py-keyword">print</tt> <tt class="py-string">'Report job status: %s'</tt> <tt class="py-op">%</tt> <tt class="py-name">status</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">    <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">sleep</tt><tt class="py-op">(</tt><tt class="py-number">30</tt><tt class="py-op">)</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">    <tt class="py-name">status</tt> <tt class="py-op">=</tt> <tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">GetReportJob</tt><tt class="py-op">(</tt><tt class="py-name">report_job_id</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'reportJobStatus'</tt><tt class="py-op">]</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">status</tt> <tt class="py-op">==</tt> <tt class="py-string">'FAILED'</tt><tt class="py-op">:</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-29" class="py-name"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-29', 'Utils', 'link-5');">Utils</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="adspygoogle.common.Utils.BoolTypeConvert" class="py-name" href="#" onclick="return doclink('link-30', 'BoolTypeConvert', 'link-28');">BoolTypeConvert</a></tt><tt class="py-op">(</tt><tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">_config</tt><tt class="py-op">[</tt><tt class="py-string">'debug'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">      <tt class="py-keyword">print</tt> <tt class="py-string">'Report process failed'</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">''</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-31" class="py-name"><a title="adspygoogle.common.Utils" class="py-name" href="#" onclick="return doclink('link-31', 'Utils', 'link-5');">Utils</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="adspygoogle.common.Utils.BoolTypeConvert" class="py-name" href="#" onclick="return doclink('link-32', 'BoolTypeConvert', 'link-28');">BoolTypeConvert</a></tt><tt class="py-op">(</tt><tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">_config</tt><tt class="py-op">[</tt><tt class="py-string">'debug'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">      <tt class="py-keyword">print</tt> <tt class="py-string">'Report has completed successfully'</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">  <tt class="py-comment"># Get report download URL.</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">  <tt class="py-name">report_url</tt> <tt class="py-op">=</tt> <tt class="py-name">service</tt><tt class="py-op">.</tt><tt class="py-name">GetReportDownloadURL</tt><tt class="py-op">(</tt><tt class="py-name">report_job_id</tt><tt class="py-op">,</tt> <tt class="py-name">export_format</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">  <tt class="py-comment"># Download report.</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">  <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">urlopen</tt><tt class="py-op">(</tt><tt class="py-name">report_url</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">  <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-name">gzip</tt><tt class="py-op">.</tt><tt class="py-name">GzipFile</tt><tt class="py-op">(</tt><tt class="py-name">fileobj</tt><tt class="py-op">=</tt><tt class="py-name">StringIO</tt><tt class="py-op">.</tt><tt class="py-name">StringIO</tt><tt class="py-op">(</tt><tt class="py-name">data</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">read</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-name">data</tt> </tt>
+</div><a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="adspygoogle-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://code.google.com/p/google-api-ads-python">DFP API Python Client Library</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
